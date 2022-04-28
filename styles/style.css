@@ -53,6 +53,13 @@ section {
     border: solid 2px var(--color1);
 }
 
+#climate {
+    background-size: 300px;
+    height: 200px;
+    width: 300px;
+    background-image: url('../assets/forest.png');
+}
+
 header {
     display: flex;
     justify-content: flex-end;

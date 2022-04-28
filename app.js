@@ -9,12 +9,17 @@ const statEl = document.getElementById('stat-display');
 const add = document.getElementById('addBtn');
 const inputEl = document.getElementById('user-input');
 const sloganDis = document.getElementById('slogan-display');
+const easterEgg = document.getElementById('main');
 // let state
 let climateChange = 0;
 let typeChange = 0;
 let castleChange = 0;
 let slogans = [];
 // set event listeners 
+
+if (climateChange === 3 && typeChange === 1 && castleChange === 4) {
+    easterEgg.classList.add('eggHit');
+}
 climateEl.addEventListener('change', () => {
     climateChange++;
     climateImg.style.backgroundImage = `url(../assets/${climateEl.value}.png)`;
@@ -43,7 +48,11 @@ add.addEventListener('click', () => {
   // update DOM to reflect the new state
 function displayStats() {
     statEl.textContent = `Climate changed ${climateChange} times, population type changed ${typeChange} times, castle changed ${castleChange} times`;
+    if (climateChange === 3 && typeChange === 1 && castleChange === 4) {
+        easterEgg.classList.add('eggHit');
+    }
 }
+
 function displaySlogans() {
     sloganDis.textContent = '';
     for (let slogan of slogans) {

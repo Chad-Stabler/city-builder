@@ -40,8 +40,8 @@ main {
 }
 
 .main-section {
-    padding-top: 0px;
-    margin-top: 0px;
+    padding: 0px 0px;
+    margin: 0px 0px;
     display: flex;
     flex-direction: row;
 }
@@ -86,6 +86,16 @@ section {
     width: 300px;
     background-image: url('../assets/remote.png');
 }
+
+#stats {
+    margin: 0px 0px;
+    padding: 0px 0px;
+}
+#slogans {
+    margin: 0px 0px;
+    padding: 0px 0px;
+}
+
 
 header {
     display: flex;

@@ -35,7 +35,6 @@ castleEL.addEventListener('change', () => {
 
 add.addEventListener('click', () => {
     slogans.push(inputEl.value);
-    console.log(slogans);
     inputEl.value = '';
     displaySlogans();
 });

@@ -92,6 +92,7 @@ section {
     padding: 0px 0px;
 }
 #slogans {
+    display: inline-block;
     margin: 0px 0px;
     padding: 0px 0px;
 }

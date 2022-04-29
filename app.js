@@ -6,17 +6,21 @@ const typeImg = document.getElementById('type');
 const castleEL = document.getElementById('castle-select');
 const castleImg = document.getElementById('castle');
 const statEl = document.getElementById('stat-display');
-const add = document.getElementById('addBtn');
+const add = document.getElementById('add-btn');
 const inputEl = document.getElementById('user-input');
 const sloganDis = document.getElementById('slogan-display');
 const easterEgg = document.getElementById('main');
 const sloganEggStyle = document.getElementById('slogans');
 const headerEggStyle = document.getElementById('if-egg-hit');
+const cityNameEl = document.getElementById('city-name');
+const cityNameInput = document.getElementById('name-input');
+const cityNameBtn = document.getElementById('name-btn');
 // let state
 let climateChange = 0;
 let typeChange = 0;
 let castleChange = 0;
 let slogans = [];
+let cityName = '';
 // set event listeners 
 
 function easterEggHit() {
@@ -48,6 +52,11 @@ add.addEventListener('click', () => {
     inputEl.value = '';
     displaySlogans();
 });
+
+cityNameBtn.addEventListener('click', () => {
+    cityName = cityNameInput.value;
+    displayName();
+});
   // get user input
   // use user input to update state 
   // update DOM to reflect the new state
@@ -62,7 +71,14 @@ function displaySlogans() {
     sloganDis.textContent = '';
     for (let slogan of slogans) {
         const newP = document.createElement('p');
-        newP.textContent = slogan;
+        if (cityName !== '') {
+            newP.textContent = `${cityName}: ${slogan}`;
+        } else newP.textContent = slogan;
         sloganDis.append(newP);
     }
+}
+
+function displayName() {
+    cityNameEl.textContent = cityName;
+    cityNameInput.value = '';
 }

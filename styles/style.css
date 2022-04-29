@@ -39,7 +39,20 @@ main {
     margin-bottom: calc(var(--footer-height));
 }
 
+main.eggHit {
+    background-image: url(../assets/arch.png);
+}
+
+.main-section {
+    padding: 0px 0px;
+    margin: 0px 0px;
+    display: flex;
+    flex-direction: row;
+    background-color: rgba(255, 255, 255, 0.45);
+}
+
 section {
+    margin: 0px 5px;
     background-color: var(--color5);
     max-width: 80%;
     display: flex;
@@ -51,7 +64,68 @@ section {
     margin-top: var(--gutter);
     margin-bottom: var(--gutter);
     border: solid 2px var(--color1);
+    background-color: rgba(255, 255, 255, 0.45);
 }
+
+.intro {
+    padding-bottom: 0px;
+    margin-bottom: 0px;
+}
+
+#castle {
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 200px;
+    width: 300px;
+    background-image: url('../assets/no.png');
+}
+
+#climate {
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 200px;
+    width: 300px;
+    background-image: url('../assets/forest.png');
+}
+
+#type {
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 200px;
+    width: 300px;
+    background-image: url('../assets/remote.png');
+}
+
+#stats {
+    margin: 0px 0px;
+    padding: 0px 0px;
+    background-color: rgba(255, 255, 255, .85);
+}
+#slogans {
+    display: inline-block;
+    margin-top: 0px;
+    padding: 0px 0px;
+    background-color: rgba(255, 255, 255, 0);
+}
+
+#name-city {
+    display: inline-block;
+    margin-top: 0px;
+    padding: 0px 0px;
+    background-color: rgba(255, 255, 255, 0);
+}
+
+#slogans.eggHit {
+    border-style: none;
+    color: rgb(135, 211, 49);
+}
+
+section.eggHit {
+    border-style: none;
+    background-color: rgba(255, 255, 255, 0);
+    color: rgb(135, 211, 49);
+}
+
 
 header {
     display: flex;
@@ -59,6 +133,10 @@ header {
     background-color: var(--color3);
     height: var(--header-height);
     box-shadow: var(--shadow);
+}
+
+select {
+    margin-top: 10px;
 }
 
 
